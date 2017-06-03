@@ -1,4 +1,4 @@
-require('pry')
+require 'pry'
 
 class Rooms
 
@@ -14,7 +14,6 @@ class Rooms
 
   def guest_count
     return @guests.length()
-
   end    
 
   def song_count
@@ -30,7 +29,7 @@ class Rooms
       @guests.push(guest)
     end
   end
- 
+
 
   def check_out_guest_from_room(guest)
     return @guests.delete(guest)
@@ -43,5 +42,11 @@ class Rooms
   def pay_fee_to_entry_room(money)
     return money - @fee
   end  
+
+  def guest_favourite_song(song)
+    for song in @songs
+      return "Whoo!"
+    end
+  end
 
 end
