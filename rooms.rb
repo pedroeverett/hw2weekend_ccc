@@ -9,6 +9,7 @@ class Rooms
     @capacity = 1
     @guests = []
     @songs = []
+    @payments = 0
     @fee = 50
   end
 
@@ -30,7 +31,6 @@ class Rooms
     end
   end
 
-
   def check_out_guest_from_room(guest)
     return @guests.delete(guest)
   end
@@ -47,6 +47,10 @@ class Rooms
     for song in @songs
       return "Whoo!"
     end
+  end
+
+  def add_paid_fee_to_payments
+    @payments + @fee
   end
 
 end

@@ -52,8 +52,11 @@ class TestRooms < MiniTest::Test
     def test_guest_favourit_song
       @room1.add_song_to_room(@song1)
       favourite_song = @room1.guest_favourite_song(@song1)
-      assert_equal("Whoo!", favourite_song)
-     
+      assert_equal("Whoo!", favourite_song) 
+    end
+
+    def test_add_paid_fee_to_payments
+      assert_equal(50, @room1.add_paid_fee_to_payments)
     end
 
   end
